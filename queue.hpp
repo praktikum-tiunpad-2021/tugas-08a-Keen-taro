@@ -1,3 +1,5 @@
+/*NEED HELP WITH TEMPLATEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
+/*REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE*/
 #pragma once
 
 namespace strukdat {
@@ -9,7 +11,10 @@ namespace priority_queue {
  */
 template <typename T>
 struct Element {
-  // Implementasikan di sini.
+  int data;
+  int priority;
+
+  T *next;
 };
 
 template <typename T>
@@ -20,9 +25,9 @@ using ElementPtr = Element<T> *;
  */
 template <typename T>
 struct Queue {
-  // Implementasikan di sini.
+  T.head;
+  T.tail;
 };
-
 /**
  * @brief membuat queue baru
  *
@@ -30,7 +35,16 @@ struct Queue {
  */
 template <typename T>
 Queue<T> new_queue() {
-  // Implementasikan di sini.
+  T.head = nullptr;
+  T.tail = nullptr;  
+}
+
+template <typename T>
+bool isEmpty(Queue<T> &q){
+  if(q.head == nullptr && q.tail == nullptr){
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -42,7 +56,10 @@ Queue<T> new_queue() {
  */
 template <typename T>
 void enqueue(Queue<T> &q, const T &value, int priority) {
-  // Implementasikan di sini.
+  q = new Element<T>;
+  q->data = value;
+  q->priority = priority;
+  q->next = nullptr;
 }
 
 /**
@@ -53,7 +70,7 @@ void enqueue(Queue<T> &q, const T &value, int priority) {
  */
 template <typename T>
 T top(const Queue<T> &q) {
-  // Implementasikan di sini.
+  return q.head->data;
 }
 
 /**
@@ -63,7 +80,18 @@ T top(const Queue<T> &q) {
  */
 template <typename T>
 void dequeue(Queue<T> &q) {
-  // Implementasikan di sini.
+  Element<T> = delElement;
+  if(isEmpty(Q)){
+    delElement = nullptr;
+  }else if(q.head->next == nullptr){
+    delElement = q.head;
+    q.head = nullptr;
+    q.tail = nullptr;
+  }else{
+    delElement = q.head;
+    q.head = q.head->next;
+    delElement->next = nullptr;
+  }
 }
 
 }  // namespace priority_queue
